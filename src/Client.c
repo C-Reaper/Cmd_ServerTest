@@ -32,7 +32,7 @@ int main(){
         Client_Signal_Send(&s,SIGNAL_MSG,buffer,CStr_Size(buffer) + 1);
 
         Client_Update(&s);
-        Client_DoAll(&s);
+        Client_DoAll(&s,NULL);
 
         printf("Waiting...\n");
         Thread_Sleep_M(1000);
