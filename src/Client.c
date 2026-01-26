@@ -17,7 +17,7 @@ void Client_Proc_Msg(Vector* signalhandlers,Client* c,void* data,int size){
 }
 
 int main(){
-    Client s = Client_Make(5000,"192.168.2.99",(SignalHandler[]){
+    Client s = Client_Make("5000","192.168.2.99",(SignalHandler[]){
         SignalHandler_New(SIGNAL_CONNECT,(void (*)(void*,void*,void*,int))Client_Proc_Connect),
         SignalHandler_New(SIGNAL_DISCONNECT,(void (*)(void*,void*,void*,int))Client_Proc_Disconnect),
         SignalHandler_New(SIGNAL_MSG,(void (*)(void*,void*,void*,int))Client_Proc_Msg),
