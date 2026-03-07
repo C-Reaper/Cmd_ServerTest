@@ -22,7 +22,8 @@ int main(){
         SignalHandler_Null()
     });
 
-    Server_Start(&s);
+    Server_Start_C(&s);
+    Server_Start_R(&s);
     //Server_Wait(&s);
 
     while(1){
